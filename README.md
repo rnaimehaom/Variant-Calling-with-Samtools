@@ -58,7 +58,9 @@ scp /UCHC/PublicShare/VariantWorkshop/reference/chr22*  ./var-intro/refernce
 
 <h2 id="First_Point_Header">Inspecting fastq files</h2>
 
-This set of commands will help you open the fastq file and have a visual inspection of the data format. If carefully noticed each read is represented by 4 set of lines. You can found the details on file format <a href="https://bio Informatics.uconn.edu/resources-and-events/tutorials/file-formats-tutorial/">here</a> here.  
+
+This set of commands will allow you to open the FASTQ file and inspect the data.  Each read is represented by 4 lines.  Details on the FASTQ file format can be found <a href="https://bio Informatics.uconn.edu/resources-and-events/tutorials/file-formats-tutorial/">here</a>.   
+ 
 
 Change the directory to the `data/` folder using:   
 ```bash
