@@ -27,7 +27,7 @@ The tutorial is based on analysis of short read data from the exome of chromosom
 <p class="toc_title">Contents</p>
 <ul class="toc_list">
 <li><a href="#Main_Point_Header">Data transfer </>
-<li><a href="#First_Point_Header">1 Inspecting fastq files </>
+<li><a href="#First_Point_Header">1 Inspecting FASTQ files </>
 <li><a href="#Second_Point_Header">2 Quality evaluation using FASTQC</a></li>
 <li><a href="#Third_Point_Header">3 Quality control using sickle</a></li>
 <li><a href="#Fourth_Point_Header">4 Aligning reads to a genome using bwa</a></li>
@@ -56,7 +56,7 @@ scp /UCHC/PublicShare/VariantWorkshop/reference/chr22*  ./var-intro/refernce
  
 
 
-<h2 id="First_Point_Header">Inspecting fastq files</h2>
+<h2 id="First_Point_Header">Inspecting FASTQ files</h2>
 
 
 This set of commands will allow you to open the FASTQ file and inspect the data.  Each read is represented by 4 lines.  Details on the FASTQ file format can be found <a href="https://bio Informatics.uconn.edu/resources-and-events/tutorials/file-formats-tutorial/">here</a>.   
@@ -140,7 +140,7 @@ This will produce a fastqc report in HTML format which need to downloaded to you
 scp user_name@transfer.cam.uchc.edu:/UCHC/LABS/CBC/Tutorials/Main_working_Tutorials/Introduction-to-Variant-Calling/03_fastqc/NA12878.GAIIx.exome_chr22.1E6reads.76bp_fastqc.html . 
 ```  
 
-The report will have a summary of your fastqc file.
+The report will have a summary of your FASTQ file.
 ![](/images/fastqc_summary.png)   
 
 Then it will consists of a report on the quality of reads as;   
