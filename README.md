@@ -41,7 +41,7 @@ The tutorial is based on analysis of short read data from the exome of chromosom
 
 Lets make few directories for the tutorial
 ```bash
-./var-intro/
+./Variant-Calling-with-Samtools/
     ├── data/
     ├── reference/
 ```
@@ -102,7 +102,7 @@ mkdir 03_fastqc
 ```   
 So now the folder structure will look like:  
 ```
-var-intro/
+Variant-Calling-with-Samtools/
 ├── 01_data
 ├── 02_reference
 └── 03_fastqc
@@ -155,7 +155,7 @@ Also it will consists of other information which you are welcome to explor durin
 
 Lets make a directory called *04_trimmed_reads* in the main folder, and then change the working directory to that folder. Now the folder structure will look like:  
 ```
-var-intro
+Variant-Calling-with-Samtools/
 ├── 01_data
 ├── 02_reference
 ├── 03_fastqc
@@ -264,7 +264,7 @@ Then by running *fastqc* program it will analyze the trimmed read files and prod
 Lets make a directory called **05_alignment** and will then change the working directory to that folder. So now the folder structure will look like:   
   
 ```
-var-intro/
+Variant-Calling-with-Samtools/
 ├── 01_data
 ├── 02_reference
 ├── 03_fastqc
@@ -378,7 +378,7 @@ Can you see a few variants?
 
 Lets make a directory called **06_pileup** if its not already made out for you, and then change the directory to that folder, where the folder strcutrue will look like:   
 ```   
-var-intro/
+Variant-Calling-with-Samtools/
 ├── 01_data
 ├── 02_reference
 ├── 03_fastqc
