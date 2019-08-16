@@ -134,6 +134,9 @@ In order to evalaute the general quality of reads in the file we will be using F
 #SBATCH -o %x_%j.out
 #SBATCH -e %x_%j.err
 
+hostname
+date
+
 module load fastqc 
 fastqc -o . ../01_data/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq
 ```  
@@ -227,6 +230,7 @@ Let's put all of this together for our sickle script using our downloaded fastq 
 #SBATCH -e %x_%j.err
 
 hostname
+date
 
 module load sickle
 
@@ -238,7 +242,7 @@ sickle pe -t sanger -f ../01_data/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq 
 module unload sickle
 
 module load fastqc
-fastqc -t 4 -o  ../fastqc/ trimmed_NA12878.fastq
+fastqc -t 4 -o  ../03_fastqc/ trimmed_NA12878.fastq
 
 ```                                                                                              
 
@@ -305,19 +309,22 @@ nano bwa_run.sh
   
 ```bash
 #!/bin/bash
-#SBATCH --job-name=bwa_run
-#SBATCH --mail-user=
-#SBATCH --mail-type=ALL
+#SBATCH --job-name=bwa_align
 #SBATCH -n 1
 #SBATCH -N 1
 #SBATCH -c 8
-#SBATCH --mem=120G
-#SBATCH -o bwa_run_%j.out
-#SBATCH -e bwa_run_%j.err
-#SBATCH --partition=general
+#SBATCH --mem=50G
 #SBATCH --qos=general
+#SBATCH --partition=general
+#SBATCH --mail-user=
+#SBATCH --mail-type=ALL
+#SBATCH -o %x_%j.out
+#SBATCH -e %x_%j.err
 
-export TMPDIR=/home/CAM/$USER/tmp/
+hostname
+date
+
+#export TMPDIR=/home/CAM/$USER/tmp/
 
 ## STEP1
 module load bwa
@@ -381,7 +388,7 @@ Can you see a few variants?
   
 <h2 id="Sixth_Point_Header">Generate a pileup file</h2>
 
-Lets make a directory called **06_pileup** if its not already made out for you, and then change the directory to that folder, where the folder strcutrue will look like:   
+Lets make a directory called **06_pileup/** if its not already made out for you, and then change the directory to that folder, where the folder strcutrue will look like:   
 ```   
 Variant-Calling-with-Samtools/
 ├── 01_data
@@ -431,22 +438,24 @@ Following samtools we will use `bcftools` to fiter the variants.
 
 ```bash
 #!/bin/bash
-#SBATCH --job-name=pileup_run
-#SBATCH --mail-user=
-#SBATCH --mail-type=ALL
+#SBATCH --job-name=pileup
 #SBATCH -n 1
 #SBATCH -N 1
-#SBATCH -c 8
-#SBATCH --mem=120G
-#SBATCH -o pileup_run_%j.out
-#SBATCH -e pileup_run_%j.err
-#SBATCH --partition=general
+#SBATCH -c 1
+#SBATCH --mem=50G
 #SBATCH --qos=general
+#SBATCH --partition=general
+#SBATCH --mail-user=
+#SBATCH --mail-type=ALL
+#SBATCH -o %x_%j.out
+#SBATCH -e %x_%j.err
 
-export TMPDIR=/home/CAM/$USER/tmp/
+hostname
+date
+#export TMPDIR=/home/CAM/$USER/tmp/
 
 module load samtools
-samtools mpileup -uf /isg/shared/databases/alignerIndex/animal/hg19_ucsc/hg19_bwa/hg19.fa trimmed_NA12878_sort.bam > pileup.out
+samtools mpileup -uf ../02_reference/chr22.fa ../05_alignment/trimmed_NA12878_sort.bam > pileup.out
 
 ```
 The full slurm scrip is called [pileup.sh](/06_pileup/pileup.sh).   
