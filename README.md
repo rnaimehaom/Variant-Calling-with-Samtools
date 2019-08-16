@@ -142,7 +142,7 @@ The above full script can also be found in here which is called [fastqc.sh](/03_
 This will produce a fastqc report in HTML format which need to downloaded to your local computer to view. To copy the file from the Xanadu cluster please use the `transfer.cam.uchc.edu` node.   
 
 ```bash
-scp user_name@transfer.cam.uchc.edu:/UCHC/LABS/CBC/Tutorials/Main_working_Tutorials/Introduction-to-Variant-Calling/03_fastqc/NA12878.GAIIx.exome_chr22.1E6reads.76bp_fastqc.html . 
+scp user_name@transfer.cam.uchc.edu:/FULL_PATH_to_FILE/NA12878.GAIIx.exome_chr22.1E6reads.76bp_fastqc.html . 
 ```  
 
 The report will have a summary of your FASTQ file.
