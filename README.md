@@ -42,15 +42,20 @@ The tutorial is based on analysis of short read data from the exome of chromosom
 Lets make few directories for the tutorial
 ```bash
 ./Variant-Calling-with-Samtools/
-    ├── data/
-    ├── reference/
+    ├── 01_data/
+    ├── 02_reference/
 ```
 
-Copy the data and reference from the source location.
+Then change the directory to the **Variant-Calling-with-Samtools/** using:  
+```bash
+cd Variant-Calling-with-Samtools 
+```  
+
+Copy the data and reference from the source location, if it has not been already done for you.
 
 ```bash
-scp /UCHC/PublicShare/VariantWorkshop/data/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq ./var-intro/data/
-scp /UCHC/PublicShare/VariantWorkshop/reference/chr22*  ./var-intro/refernce
+scp /UCHC/PublicShare/VariantWorkshop/data/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq ./01_data/
+scp /UCHC/PublicShare/VariantWorkshop/reference/chr22*  ./02_refernce/
 
 ```     
  
@@ -64,7 +69,7 @@ This set of commands will allow you to open the FASTQ file and inspect the data.
 
 Change the directory to the `data/` folder using:   
 ```bash
-cd data/  
+cd 01_data/  
 ```  
 
 To inspect the first few lines in the FASTQ file can use the `head` command, as follows which will print the first few lines into the terminal window.     
