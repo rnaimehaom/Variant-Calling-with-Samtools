@@ -58,6 +58,20 @@ scp /UCHC/PublicShare/VariantWorkshop/data/NA12878.GAIIx.exome_chr22.1E6reads.76
 scp /UCHC/PublicShare/VariantWorkshop/reference/chr22*  ./02_refernce/
 
 ```     
+
+Once the files have been copied to the above two folders the folder structure will look like:  
+```
+01_data/
+└── NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq
+02_reference/
+├── chr22.amb
+├── chr22.ann
+├── chr22.bwt
+├── chr22.fa
+├── chr22.pac
+└── chr22.sa
+```  
+
  
 
 
