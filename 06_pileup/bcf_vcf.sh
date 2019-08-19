@@ -21,8 +21,7 @@ bcftools filter -s LowQual -e '%QUAL<20 || DP>100' var.raw.vcf  > var.flt.vcf
 
 
 
-echo "end of pileup"
-date
+
 
 
 
