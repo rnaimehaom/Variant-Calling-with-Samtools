@@ -15,7 +15,7 @@ hostname
 
 module load sickle
 
-sickle pe -t sanger -f ../01_data/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq \
+sickle se -t sanger -f ../01_data/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq \
         -o trimmed_NA12878.fastq \
         -l 45 \
         -q 25  
