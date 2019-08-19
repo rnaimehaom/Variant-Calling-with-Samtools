@@ -141,8 +141,8 @@ In order to evalaute the general quality of reads in the file we will be using F
 #SBATCH -N 1
 #SBATCH -c 1
 #SBATCH --mem=10G
-#SBATCH --qos=general
-#SBATCH --partition=general
+#SBATCH --qos=mcbstudent
+#SBATCH --partition=mcbstudent
 #SBATCH --mail-user=
 #SBATCH --mail-type=ALL
 #SBATCH -o %x_%j.out
@@ -236,8 +236,8 @@ Let's put all of this together for our sickle script using our downloaded fastq 
 #SBATCH -N 1
 #SBATCH -c 1
 #SBATCH --mem=10G
-#SBATCH --qos=general
-#SBATCH --partition=general
+#SBATCH --qos=mcbstudent
+#SBATCH --partition=mcbstudent
 #SBATCH --mail-user=
 #SBATCH --mail-type=ALL
 #SBATCH -o %x_%j.out
@@ -328,8 +328,8 @@ nano bwa_run.sh
 #SBATCH -N 1
 #SBATCH -c 8
 #SBATCH --mem=50G
-#SBATCH --qos=general
-#SBATCH --partition=general
+#SBATCH --qos=mcbstudent
+#SBATCH --partition=mcbstudent
 #SBATCH --mail-user=
 #SBATCH --mail-type=ALL
 #SBATCH -o %x_%j.out
@@ -457,8 +457,8 @@ Following samtools we will use `bcftools` to fiter the variants.
 #SBATCH -N 1
 #SBATCH -c 1
 #SBATCH --mem=50G
-#SBATCH --qos=general
-#SBATCH --partition=general
+#SBATCH --qos=mcbstudent
+#SBATCH --partition=mcbstudent
 #SBATCH --mail-user=
 #SBATCH --mail-type=ALL
 #SBATCH -o %x_%j.out
@@ -493,8 +493,8 @@ following is the slurm script.
 #SBATCH -N 1
 #SBATCH -c 1
 #SBATCH --mem=50G
-#SBATCH --qos=general
-#SBATCH --partition=general
+#SBATCH --qos=mcbstudent
+#SBATCH --partition=mcbstudent
 #SBATCH --mail-user=
 #SBATCH --mail-type=ALL
 #SBATCH -o %x_%j.out
