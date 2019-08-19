@@ -385,7 +385,7 @@ To visualise the alignment data:
 
 Transfer the bam file and the index file to your local machine, using `transfer.cam.uchc.edu` transfer node. 
 ```bash
-scp user_id@transfer.cam.uchc.edu:/UCHC/LABS/CBC/Tutorials/Main_working_Tutorials/Introduction-to-Variant-Calling/05_alignment/trimmed_NA12878_sort.bam* .
+scp user_id@transfer.cam.uchc.edu:/UCHC/PublicShare/Variant_Detection_Tutorials/Variant-Calling-with-Samtools/05_alignment/trimmed_NA12878_sort.bam* .
 ```  
 
 Start IGV on your computer. You will need Java installed on your computer to run IGV)open the BAM file in your current IGV session.
