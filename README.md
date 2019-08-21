@@ -22,20 +22,19 @@ Visualise BAM files using the Integrative Genomics Viewer (IGV) and identify lik
 ### Note on Source Data
 The tutorial is based on analysis of short read data from the exome of chromosome 22 of a single human individual. This individual, a Caucasian female from the US, has been sequenced many times and is one of the best genetically characterised humans in the world - her family was one of the original 30 trios in Hapmap project (www.hapmap.org), she was part of the 1000 Genomes project (www.1000genomes.org), the 10Gen project (www.sequenceontology.org/resources/10Gen.html),  and is often used for benchmarking NGS tools (eg http://www.completegenomics.com/sequence-data/download-data/, http://www.broadinstitute.org/gsa/wiki/index.php/NA12878_test_data).    
 
+Contents   
+1.    [Data transfer](#data-transfer)
+2.    [Inspecting FASTQ files](#inspecting-fastq-files)
+3.    [Quality evaluation using FASTQC](#quality-evaluation-using-fastqc)
+4.    [Quality control using sickle](#quality-control-using-sickle)
+5.    [Aligning reads to a genome using bwa](#aligning-reads-to-a-genome-using-bwa)
+6.    [Visualise the BAM file with IGV](#visualise-the-bam-file-with-igv)
+7.    [Generate a pileup file](#generate-a-pileup-file)
+8.    [Filtering using BCFtools](#filtering-using-bcftools)
 
-<div id="toc_container">
-<p class="toc_title">Contents</p>
-<ul class="toc_list">
-<li><a href="#Main_Point_Header">Data transfer </>
-<li><a href="#First_Point_Header">1 Inspecting FASTQ files </>
-<li><a href="#Second_Point_Header">2 Quality evaluation using FASTQC</a></li>
-<li><a href="#Third_Point_Header">3 Quality control using sickle</a></li>
-<li><a href="#Fourth_Point_Header">4 Aligning reads to a genome using bwa</a></li>
-<li><a href="#Fifth_Point_Header">5 Visualise the BAM file with IGV</a></li>
-<li><a href="#Sixth_Point_Header">6 Generate a pileup file</a></li>
-<li><a href="#Seventh_Point_Header">7 Filtering using BCFtools</a></li>
-</ul>
-</div>
+
+
+
 
 <h2 id="First_Point_Header">Data transfer</h2>
 
@@ -113,7 +112,7 @@ The command below will help you count number of reads in the file
 ```   
 
 
-<h2 id="Second_Point_Header">Quality evaluation using FASTQC </h2>
+<h2 id="Second_Point_Header">Quality evaluation using FASTQC</h2>
 
 Lets create a directory called **fastqc** folder inside the main folder **var-intro**, if it has not created for you. Then go into the fastqc folder using changing directory.   
 ```bash
