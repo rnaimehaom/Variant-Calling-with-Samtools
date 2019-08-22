@@ -53,8 +53,8 @@ cd Variant-Calling-with-Samtools
 Copy the data and reference from the source location, if it has not been already done for you.
 
 ```bash
-scp /UCHC/PublicShare/VariantWorkshop/data/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq ./01_data/
-scp /UCHC/PublicShare/VariantWorkshop/reference/chr22*  ./02_refernce/
+cp /UCHC/PublicShare/VariantWorkshop/data/NA12878.GAIIx.exome_chr22.1E6reads.76bp.fastq ./01_data/
+cp /UCHC/PublicShare/VariantWorkshop/reference/chr22*  ./02_refernce/
 
 ```     
 
